@@ -14,7 +14,7 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 `filer` is an R package to read and write multiple files.
 
 The user can supply a custom read function and the files are input and
-output as a named list of objects.
+output as a list of named objects.
 
 ## Utilisation
 
@@ -59,6 +59,9 @@ lapply(objects, head)
 #> 4  10.5     72   16.4
 #> 5  10.7     81   18.8
 #> 6  10.8     83   19.7
+names(objects) <- file_names(n = length(objects))
+
+dir <- tempdir()
 ```
 
 ## Installation
@@ -83,7 +86,7 @@ To install the latest development version from the Poisson drat
 To cite package 'filer' in publications use:
 
   Joe Thorley (2018). filer: Read and Write Multiple Files. R
-  package version 0.0.0.9000.
+  package version 0.0.0.9001.
   https://github.com/poissonconsulting/filer
 
 A BibTeX entry for LaTeX users is
@@ -92,7 +95,7 @@ A BibTeX entry for LaTeX users is
     title = {filer: Read and Write Multiple Files},
     author = {Joe Thorley},
     year = {2018},
-    note = {R package version 0.0.0.9000},
+    note = {R package version 0.0.0.9001},
     url = {https://github.com/poissonconsulting/filer},
   }
 ```

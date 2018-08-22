@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 `filer` is an R package to read and write multiple files.
 
-The user can supply a custom read function and the files are input and output as a named list of objects.
+The user can supply a custom read function and the files are input and output as a list of named objects.
 
 ## Utilisation
 
@@ -33,6 +33,9 @@ library(filer)
 dir <- system.file("extdata", package = "filer")
 objects <- read_files(dir, .recursive = TRUE)
 lapply(objects, head)
+names(objects) <- file_names(n = length(objects))
+
+dir <- tempdir()
 ```
 
 ## Installation

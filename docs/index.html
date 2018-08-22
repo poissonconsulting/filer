@@ -29,7 +29,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">filer</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.0.9000</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.0.9001</span>
       </span>
     </div>
 
@@ -73,7 +73,7 @@
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
 <p><code>filer</code> is an R package to read and write multiple files.</p>
-<p>The user can supply a custom read function and the files are input and output as a named list of objects.</p>
+<p>The user can supply a custom read function and the files are input and output as a list of named objects.</p>
 </div>
 <div id="utilisation" class="section level2">
 <h2 class="hasAnchor">
@@ -117,7 +117,10 @@
 <a class="sourceLine" id="cb1-37" data-line-number="37"><span class="co">#&gt; 3   8.8     63   10.2</span></a>
 <a class="sourceLine" id="cb1-38" data-line-number="38"><span class="co">#&gt; 4  10.5     72   16.4</span></a>
 <a class="sourceLine" id="cb1-39" data-line-number="39"><span class="co">#&gt; 5  10.7     81   18.8</span></a>
-<a class="sourceLine" id="cb1-40" data-line-number="40"><span class="co">#&gt; 6  10.8     83   19.7</span></a></code></pre></div>
+<a class="sourceLine" id="cb1-40" data-line-number="40"><span class="co">#&gt; 6  10.8     83   19.7</span></a>
+<a class="sourceLine" id="cb1-41" data-line-number="41"><span class="kw">names</span>(objects) &lt;-<span class="st"> </span><span class="kw"><a href="reference/file_names.html">file_names</a></span>(<span class="dt">n =</span> <span class="kw">length</span>(objects))</a>
+<a class="sourceLine" id="cb1-42" data-line-number="42"></a>
+<a class="sourceLine" id="cb1-43" data-line-number="43">dir &lt;-<span class="st"> </span><span class="kw">tempdir</span>()</a></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -137,7 +140,7 @@ install.packages("filer")</a></code></pre>
 To cite package 'filer' in publications use:
 
   Joe Thorley (2018). filer: Read and Write Multiple Files. R
-  package version 0.0.0.9000.
+  package version 0.0.0.9001.
   https://github.com/poissonconsulting/filer
 
 A BibTeX entry for LaTeX users is
@@ -146,7 +149,7 @@ A BibTeX entry for LaTeX users is
     title = {filer: Read and Write Multiple Files},
     author = {Joe Thorley},
     year = {2018},
-    note = {R package version 0.0.0.9000},
+    note = {R package version 0.0.0.9001},
     url = {https://github.com/poissonconsulting/filer},
   }</code></pre>
 </div>
