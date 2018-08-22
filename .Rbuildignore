@@ -1,0 +1,10 @@
+^data-raw$
+^\.github$
+^codecov\.yml$
+^LICENSE\.md$
+^\.travis\.yml$
+^CODE_OF_CONDUCT\.md$
+^README\.Rmd$
+^.*\.Rproj$
+^\.Rproj\.user$
+^docs$
