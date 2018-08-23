@@ -2,4 +2,7 @@
 
 export(file_names)
 export(read_files)
+export(write_files)
 import(checkr)
+import(concatenate)
+import(yesno)

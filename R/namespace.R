@@ -1,2 +1,2 @@
-#' @import checkr
+#' @import concatenate checkr yesno
 NULL

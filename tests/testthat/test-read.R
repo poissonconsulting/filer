@@ -8,9 +8,10 @@ test_that("read", {
                    c("chickwts.rds", "mtcars.rds", "trees.rds"))
   expect_identical(names(read_files(dir, .recursive = TRUE)), 
                    c("chickwts.rds", "mtcars.rds", "sub/chickwts.rds", "trees.rds"))
-  expect_identical(read_files(dir)[[1]], datasets::chickwts)
-  expect_equal(read_files(dir, .pattern = ".csv", .fun = utils::read.csv)[[1]], datasets::chickwts)
+  expect_identical(read_files(dir)[[1]], head(datasets::chickwts))
+  expect_equivalent(read_files(dir, .pattern = ".csv", .fun = utils::read.csv)[[1]], 
+               head(datasets::chickwts))
   expect_warning(read_files(dir, .pattern = ".csv", .silent = TRUE), 
-                 "the following file failed to read: 'chickwts.csv'")
+                "1 file failed to read: chickwts.csv")
 })
   

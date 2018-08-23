@@ -17,13 +17,14 @@
 #' @export
 #' @examples
 #' dir <- system.file("extdata", package = "filer")
-#' read_files(dir)
+#' objects <- read_files(dir)
+#' lapply(objects, head)
 read_files <- function(.dir = ".", .pattern = "[.]rds$", .fun = readRDS, 
                        .recursive = FALSE, .hidden = FALSE, 
                        .silent = FALSE, ...) {
   check_string(.dir)
   check_string(.pattern)
-  check_function(.fun)
+  check_function(.fun, nargs = TRUE)
   check_flag(.recursive)
   check_flag(.hidden)
   check_flag(.silent)
@@ -43,8 +44,9 @@ read_files <- function(.dir = ".", .pattern = "[.]rds$", .fun = readRDS,
   if(any(failed)) {
     objects <- objects[!failed]
     failed <- names(failed[failed])
-    warning("the following ", plural("file", length(failed)), " failed to read: ", 
-            punctuate(failed, "and") , call. = FALSE)
+    warning(cn_and(failed, 
+                   "%n file failed to read: %c", 
+                   "%n files failed to read: %c"), call. = FALSE)
   }
   objects
 }

@@ -1,18 +1,21 @@
 Package: filer
-Title: Read and Write Multiple Files
-Version: 0.0.0.9001
+Title: Read and Write Bulk Files
+Version: 0.0.0.9002
 Date: 2018-08-22
 Authors@R: 
     person(given = "Joe",
            family = "Thorley",
            role = c("aut", "cre"),
            email = "joe@poissonconsulting.ca")
-Description: Reads and writes multiple files as a named list of objects.
+Description: Reads and writes bulk files as a named list of objects.
+  The user can supply custom read and write functions.
 License: MIT + file LICENSE
 URL: https://github.com/poissonconsulting/filer
 BugReports: https://github.com/poissonconsulting/filer/issues
 Imports:
-    checkr
+    concatenate,
+    checkr,
+    yesno
 Suggests: 
     covr,
     datasets,

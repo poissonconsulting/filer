@@ -14,28 +14,23 @@ knitr::opts_chunk$set(
 ```
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build status](https://travis-ci.org/poissonconsulting/filer.svg?branch=master)](https://travis-ci.org/poissonconsulting/filer)
+[![Travis build status](https://travis-ci.com/poissonconsulting/filer.svg?branch=master)](https://travis-ci.com/poissonconsulting/filer)
 [![Coverage status](https://codecov.io/gh/poissonconsulting/filer/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/filer?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Introduction
 
-`filer` is an R package to read and write multiple files.
-
-The user can supply a custom read function and the files are input and output as a list of named objects.
+`filer` is an R package read and write bulk files as a named list of objects.
+The user can supply custom read and write functions.
 
 ## Utilisation
 
 ```{r}
 library(filer)
 
-dir <- system.file("extdata", package = "filer")
-objects <- read_files(dir, .recursive = TRUE)
-lapply(objects, head)
-names(objects) <- file_names(n = length(objects))
-
-dir <- tempdir()
+objects <- read_files(system.file("extdata", package = "filer"))
+objects
 ```
 
 ## Installation

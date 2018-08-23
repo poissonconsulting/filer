@@ -33,7 +33,8 @@ Reads multiple files from a directory.
 }
 \examples{
 dir <- system.file("extdata", package = "filer")
-read_files(dir)
+objects <- read_files(dir)
+lapply(objects, head)
 }
 \seealso{
 \code{\link{list.files}}
