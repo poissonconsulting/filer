@@ -117,7 +117,7 @@
     <p>Reads multiple files from a directory.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/filer/man/read_files.html'>read_files</a></span>(.dir = <span class='st'>"."</span>, .pattern = <span class='st'>"[.]rds$"</span>, .fun = <span class='kw'>readRDS</span>,
+    <pre class="usage"><span class='fu'>read_files</span>(.dir = <span class='st'>"."</span>, .pattern = <span class='st'>"[.]rds$"</span>, .fun = <span class='kw'>readRDS</span>,
   .recursive = <span class='fl'>FALSE</span>, .hidden = <span class='fl'>FALSE</span>, .silent = <span class='fl'>FALSE</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -165,8 +165,9 @@ suppressed when trying to read a file.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>dir</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, package = <span class='st'>"filer"</span>)
-<span class='kw'>objects</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/filer/man/read_files.html'>read_files</a></span>(<span class='kw'>dir</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='kw'>objects</span>, <span class='kw'>head</span>)</div><div class='output co'>#&gt; $chickwts.rds
+<span class='kw'>objects</span> <span class='op'>&lt;-</span> <span class='fu'>read_files</span>(<span class='kw'>dir</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='kw'>objects</span>, <span class='kw'>head</span>)
+</div><div class='output co'>#&gt; $chickwts.rds
 #&gt;   weight      feed
 #&gt; 1    179 horsebean
 #&gt; 2    160 horsebean
@@ -208,7 +209,7 @@ suppressed when trying to read a file.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.9000.</p>
 </div>
 
       </footer>
