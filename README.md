@@ -1,11 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![R build
-status](https://github.com/poissonconsulting/filer/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/filer/actions)
-[![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/filer/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/filer?branch=master)
+[![Lifecycle:
+deprecated](https://img.shields.io/badge/lifecycle-deprecated-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#deprecated)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -66,23 +63,21 @@ To install the latest development version from the Poisson drat
 
 ## Citation
 
-``` 
 
-To cite package 'filer' in publications use:
+    To cite package 'filer' in publications use:
 
-  Joe Thorley (2018). filer: Read and Write Bulk Files. R package
-  version 0.0.0.9002. https://github.com/poissonconsulting/filer
+      Joe Thorley (2018). filer: Read and Write Bulk Files. R package
+      version 0.0.0.9002. https://github.com/poissonconsulting/filer
 
-A BibTeX entry for LaTeX users is
+    A BibTeX entry for LaTeX users is
 
-  @Manual{,
-    title = {filer: Read and Write Bulk Files},
-    author = {Joe Thorley},
-    year = {2018},
-    note = {R package version 0.0.0.9002},
-    url = {https://github.com/poissonconsulting/filer},
-  }
-```
+      @Manual{,
+        title = {filer: Read and Write Bulk Files},
+        author = {Joe Thorley},
+        year = {2018},
+        note = {R package version 0.0.0.9002},
+        url = {https://github.com/poissonconsulting/filer},
+      }
 
 ## Contribution
 
