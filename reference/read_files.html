@@ -45,6 +45,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -56,9 +58,15 @@
 
 
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -79,19 +87,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/poissonconsulting/filer/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -117,8 +119,8 @@
     <p>Reads multiple files from a directory.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>read_files</span>(.dir = <span class='st'>"."</span>, .pattern = <span class='st'>"[.]rds$"</span>, .fun = <span class='kw'>readRDS</span>,
-  .recursive = <span class='fl'>FALSE</span>, .hidden = <span class='fl'>FALSE</span>, .silent = <span class='fl'>FALSE</span>, <span class='kw'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>read_files</span><span class='op'>(</span>.dir <span class='op'>=</span> <span class='st'>"."</span>, .pattern <span class='op'>=</span> <span class='st'>"[.]rds$"</span>, .fun <span class='op'>=</span> <span class='va'>readRDS</span>,
+  .recursive <span class='op'>=</span> <span class='cn'>FALSE</span>, .hidden <span class='op'>=</span> <span class='cn'>FALSE</span>, .silent <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -164,9 +166,9 @@ suppressed when trying to read a file.</p></td>
     <div class='dont-index'><p><code><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>dir</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, package = <span class='st'>"filer"</span>)
-<span class='kw'>objects</span> <span class='op'>&lt;-</span> <span class='fu'>read_files</span>(<span class='kw'>dir</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='kw'>objects</span>, <span class='kw'>head</span>)
+    <pre class="examples"><div class='input'><span class='va'>dir</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"extdata"</span>, package <span class='op'>=</span> <span class='st'>"filer"</span><span class='op'>)</span>
+<span class='va'>objects</span> <span class='op'>&lt;-</span> <span class='fu'>read_files</span><span class='op'>(</span><span class='va'>dir</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='va'>objects</span>, <span class='va'>head</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $chickwts.rds
 #&gt;   weight      feed
 #&gt; 1    179 horsebean
@@ -209,7 +211,7 @@ suppressed when trying to read a file.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
@@ -217,6 +219,8 @@ suppressed when trying to read a file.</p></td>
 
   
 
+
+  
 
   </body>
 </html>
